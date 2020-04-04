@@ -2,13 +2,14 @@ import React, {useState, useEffect} from  'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {  makeStyles } from '@material-ui/core/styles';
 
+import { useHistory } from 'react-router';
 
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import parse from 'html-react-parser';
-import { Markup } from 'interweave';
+// import { Markup } from 'interweave';
 
 
 import {fetchAllPostsFromGhostAPIRequest} from '../actions/all_posts';
@@ -25,6 +26,7 @@ const useStyles = makeStyles(theme => ({
 export default function Home() {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const allPosts = useSelector(state => state.allPosts.allPosts)
   console.log(allPosts);
@@ -38,7 +40,10 @@ export default function Home() {
     dispatch(fetchAllPostsFromGhostAPIRequest())
   }
 
+ const handleExcerptClick = (v) => {
 
+   history.push(`/${v.slug}`, {postData: v})
+ }
 
   if(allPosts.posts){
     return(  <div className="w-full sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500 h-screen ">
@@ -46,11 +51,11 @@ export default function Home() {
           {allPosts.posts.map((v,i) =>
             <div key={i}>
 
-              <Markup content={v.html} />
+              <div className="p-6 bg-gray-200 m-10" onClick={() => {handleExcerptClick(v)}}>
 
-              <div className="p-6 bg-gray-200">
-                  {parse(v.html)}
+                  {parse(v.excerpt)}
               </div>
+
             </div>
           )}
 
