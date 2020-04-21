@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     // background: '#f9f9f9',
     height: '50vh',
-    margin: '3em',   
+    margin: '3em',
     opacity:'0.9',
     repeat: 'no-repeat',
     // top:'2em',
@@ -43,17 +43,17 @@ export default function Post(props) {
   console.log(postInfo);
 
     return(  <div className="w-full  h-screen ">
-    
 
+    
       <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
 
       <div class="font-bold text-xl mb-2 text-center text-6xl	">{postInfo.title}</div>
-      
 
-      <div class="text-gray-900 leading-none m-24 text-center object-none object-center items-center p-24 px-64 ml-48 justify-center leading-snug" 
+
+      <div class="text-gray-900 leading-none m-24 text-center object-none object-center items-center p-24 px-64 ml-48 justify-center leading-snug"
       dangerouslySetInnerHTML={{ __html: postInfo.html }} />
 
-      
+
 
 
       {}
