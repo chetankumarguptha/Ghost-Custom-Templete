@@ -7,7 +7,7 @@ import {  makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   root: {
     background: '#ff615E',
-    height: '50vh',
+    height: 'auto',
     margin: '5em'
   },
 
@@ -22,7 +22,7 @@ export default function Hello() {
   }
 
   return (
-    <div className="w-full sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500 h-screen ">
+    <div className="w-full  ">
     <Paper elevation={1} className={classes.root}>
       <div className="w-full bg-white flex justify-center h-8 m-4">
         {num}
