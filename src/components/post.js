@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 // import parse from 'html-react-parser';
 import bgimage from '../images/images.jpeg'
 // import { width } from '@material-ui/system';
-
+import Footer from "./footer"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,17 +47,18 @@ export default function Post(props) {
     
       <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
 
-      <div class="font-bold text-xl mb-2 text-center text-6xl	">{postInfo.title}</div>
+      <div className="font-bold text-xl mb-2 text-center text-6xl	">{postInfo.title}</div>
 
 
       <div class="text-gray-900 leading-none m-24 text-center object-none object-center items-center p-24 px-64 ml-48 justify-center leading-snug"
       dangerouslySetInnerHTML={{ __html: postInfo.html }} />
 
-
-
-
-      {}
-      </div>)
+     
+      <Footer />
+      </div>
+      
+      
+      )
   }
   // <Button color="primary" onClick={handleBack}> Back </Button>
 

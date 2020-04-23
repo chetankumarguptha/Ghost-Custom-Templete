@@ -46,44 +46,46 @@ export default function CardPost(props) {
 
  return(
    <div>
-   <div>
-       <Helmet>
-       <meta charSet="utf-8" />
-       <link rel="canonical" href={ parse (props.v.url )}   />
-       <meta name="description" content="A React.js application" />
+      <Helmet>
+      <meta charSet="utf-8" />
+      <link rel="canonical" href={ parse (props.v.url )}   />
+      <meta name="description" content="A React.js application" />
 
-       </Helmet>
-       <div class="container px-4 md:px-0 max-w-6xl mx-auto p-10 -mt-12">
-
-
-
-         <div className="w-auto  rounded  sm:flex">
-
-             <div class="px-6 py-4 md:w-2/3">
-             <h2 class="mb-2 font-black">{props.v.title}</h2>
-             <p class="mb-4 text-grey-dark text-sm">
-             {parse(props.v.excerpt)}
-             </p>
-               <div class="flex-none mt-auto bg-white rounded-b lg:mt-12 rounded-t-none overflow-hidden shadow-lg p-6">
-               <div class="flex items-center justify-between">
-                 <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author" />
-                 <p class="text-gray-600 text-xs md:text-sm">
-                 <TimeAgo date={parse (props.v.published_at )}>{({ value }) => <h2>{value}</h2>}</TimeAgo>
-
-                 </p>
-               </div>
-             </div>
-
-           </div>
-           <div class="h-48 sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover bg-center rounded rounded-t sm:rounded sm:rounded-l text-center overflow-hidden">
-           <img src={props.v.feature_image} class="h-full w-full shadow"  onClick={(v) => {handleExcerptClick(v)}}  />
-           </div>
-         </div>
-
-
-     </div>
-   </div>
+      </Helmet>      
+      <div className="container  cursor-pointer px-4 md:px-0 max-w-6xl mx-auto p-10 -mt-12">
+        <div className="w-auto  rounded  sm:flex" onClick={()=>handleExcerptClick(props.v)}>
+          <div className="px-6 py-4 md:w-2/3">
+            <h2 className="mb-2 font-black">{props.v.title}</h2>
+            <p className="mb-4 text-grey-dark text-sm">
+            {parse(props.v.excerpt)}
+            </p>
+            <div className="flex-none mt-auto  lg:mt-12  p-6">
+              <div className="flex items-center justify-between">
+                <img className="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src={props.v.feature_image} alt="Avatar of Author" />
+                <p className="text-gray-600 text-xs md:text-sm">
+                <TimeAgo date={parse (props.v.published_at )}>{({ value }) => <h2>{value}</h2>}</TimeAgo>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className=" sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover  hover:shadow-2xl rounded-t lg:ml-12 
+          rounded-lg   sm:rounded-l ">
+          <img src={props.v.feature_image} className="h-full w-full rounded-lg "  onClick={()=>handleExcerptClick(props.v)} />
+          </div>
+        </div>
+      </div>
    </div>
  )
 
 }
+
+
+// if(allPosts.posts){
+//   return(
+    
+//     )
+// } else {
+//   return (
+//   );
+// }
+// <button class="transition duration-500 ease-in-out bg-blue-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">

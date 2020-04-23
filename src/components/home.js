@@ -6,6 +6,7 @@ import {Helmet} from "react-helmet";
 import { useHistory } from 'react-router';
 import TimeAgo from 'react-timeago';
 
+import PropTypes from 'prop-types';
 
 // import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -18,16 +19,19 @@ import Footer from '../components/footer'
 
 import {fetchAllPostsFromGhostAPIRequest} from '../actions/all_posts';
 import { width } from '@material-ui/system';
+import Hidden from '@material-ui/core/Hidden';
 
 
 import CardPost from './card_post';
 import CardFeaturePost from './card_feature_post';
-
+import Subscribe from './subscribe'
+import Header from './header'
 const useStyles = makeStyles(theme => ({
   root: {
-    // background: '#f9f9f9',
-    // height: '50vh',
-    // margin: '5em'
+    background: '#f9f9f9',
+    height: 'auto',
+    margin: '5em',
+    width:'auto'
   },
   imge:{
     height:'33em',
@@ -78,45 +82,27 @@ export default function Home() {
 
   if(allPosts.posts){
     return(
-  <div className="w-full  h-screen  bg-gray-200 font-sans leading-normal tracking-normal ">
-    <div className={classes.imge}>
-			<div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
-					<p class="text-white font-extrabold text-6xl md:text-5xl">
-						AdvisorApp
-					</p>
-					<p class="text-xl md:text-2xl text-gray-500"> </p>
-			</div>
-		</div>
-
-      <div  className=" bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t p-10 mt-8  ">
-          <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-56">
-
-          </div>
-          {allPosts.posts.map((v,i) =>
-            <div key={i}>
-              {handlePostTypeFeature(v)}
+      <div className="w-full  h-screen   font-sans leading-normal tracking-normal ">
+        <Header />
+          <div className="container mx-auto bg-gray-100 rounded-lg  ">
+            <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t   ">
+                <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-56  "></div>
+                {allPosts.posts.map((v,i) =>
+                  <div key={i} >
+                    {handlePostTypeFeature(v)}
+                  </div>
+                )}
+                {allPosts.posts.map((v,i) =>
+                  <div key={i} className="mt-12">
+                    {handlePostType(v)}
+                  </div>
+                )}
+              <Subscribe />
             </div>
-          )}
-          {allPosts.posts.map((v,i) =>
-            <div key={i}>
-              {handlePostType(v)}
-            </div>
-          )}
-          <div className="container font-sans bg-teal-100 rounded mt-8 p-4 md:p-24 text-center  px-4 md:px-0 max-w-6xl mx-auto mt-32"  >
-          <h2 class="font-bold break-normal text-2xl md:text-4xl">Subscribe</h2>
-          <h3 class="font-bold break-normal font-normal text-gray-600 text-base md:text-xl">Get the latest posts delivered right to your inbox</h3>
-          <div class="w-full text-center pt-4">
-            <form action="#">
-              <div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center">
-                <input type="email" placeholder="youremail@example.com" class="flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none" />
-                <button type="submit" class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-teal-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-teal-400">Subscribe</button>
-              </div>
-            </form>
           </div>
-        </div>
-
+        <Footer />
       </div>
-      </div>)
+      )
   } else {
     return (
     <div className="flex justify-center m-12"> <CircularProgress /> </div>
@@ -124,3 +110,6 @@ export default function Home() {
   }
 
 }
+Paper.propTypes = {
+  width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired,
+};
