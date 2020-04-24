@@ -62,7 +62,7 @@ export default function CardFeaturePost(props) {
        </Helmet>
        <div className="container cursor-pointer px-4 md:px-0 max-w-6xl mx-auto p-10 -mt-12">
          <div className="w-auto  rounded-lg  sm:flex">
-           <div className=" sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover  lg:-ml-12  rounded-t rounded-lg 
+           <div className=" sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover  md:ml-4 rounded-t rounded-lg 
                 sm:rounded-l ">
               <img src={props.v.feature_image} class="h-full w-full shadow rounded-lg " onClick={()=>handleExcerptClick(props.v)}  />
             </div>
@@ -75,7 +75,7 @@ export default function CardFeaturePost(props) {
                   py-2 px-4 border border-gray-800 hover:border-transparent rounded" onClick={()=>handleExcerptClick(props.v)}>
                     Read More...
                   </button>
-                <div className="flex-none mt-auto  rounded-b lg:mt-12  p-6">
+                <div className="flex-none mt-auto  rounded-b lg:mt-12  p-6" >
                   <div className="flex items-center justify-between">
                     <img className="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author" />
                       <p className="text-gray-600 text-xs md:text-sm">

@@ -68,7 +68,7 @@ export default function CardPost(props) {
               </div>
             </div>
           </div>
-          <div className=" sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover  hover:shadow-2xl rounded-t lg:ml-12 
+          <div className=" sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover  hover:shadow-2xl rounded-t md:mr-4 sm:mr-4
           rounded-lg   sm:rounded-l ">
           <img src={props.v.feature_image} className="h-full w-full rounded-lg "  onClick={()=>handleExcerptClick(props.v)} />
           </div>

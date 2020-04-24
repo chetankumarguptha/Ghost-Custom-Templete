@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import bgimage from '../images/images.jpeg'
 // import { width } from '@material-ui/system';
 import Footer from "./footer"
+import Navbar from "./navpost"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,7 +44,7 @@ export default function Post(props) {
   console.log(postInfo);
 
     return(  <div className="w-full  h-screen ">
-
+          <Navbar className="" />
     
       <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
 

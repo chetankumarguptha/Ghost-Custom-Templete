@@ -15,7 +15,6 @@ import {blueGrey, green, blue, yellow} from '@material-ui/core/colors';
 import Home from './components/home'
 import Post from './components/post'
 import Footer from "./components/footer"
-
 const theme = createMuiTheme({
   palette: {
      primary: {

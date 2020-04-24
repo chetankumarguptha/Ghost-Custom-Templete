@@ -26,6 +26,7 @@ import CardPost from './card_post';
 import CardFeaturePost from './card_feature_post';
 import Subscribe from './subscribe'
 import Header from './header'
+import Navbar from "./navbar"
 const useStyles = makeStyles(theme => ({
   root: {
     background: '#f9f9f9',
@@ -82,25 +83,28 @@ export default function Home() {
 
   if(allPosts.posts){
     return(
-      <div className="w-full  h-screen   font-sans leading-normal tracking-normal ">
-        <Header />
-          <div className="container mx-auto bg-gray-100 rounded-lg  ">
-            <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t   ">
-                <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-56  "></div>
-                {allPosts.posts.map((v,i) =>
-                  <div key={i} >
-                    {handlePostTypeFeature(v)}
-                  </div>
-                )}
-                {allPosts.posts.map((v,i) =>
-                  <div key={i} className="mt-12">
-                    {handlePostType(v)}
-                  </div>
-                )}
-              <Subscribe />
+      <div>
+        <Navbar />
+        <div className="w-full  h-screen   font-sans leading-normal tracking-normal ">
+          <Header />
+            <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 ">
+              <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t   ">
+                  <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-48  "></div>
+                  {allPosts.posts.map((v,i) =>
+                    <div key={i} >
+                      {handlePostTypeFeature(v)}
+                    </div>
+                  )}
+                  {allPosts.posts.map((v,i) =>
+                    <div key={i} className="mt-12">
+                      {handlePostType(v)}
+                    </div>
+                  )}
+                <Subscribe />
+              </div>
             </div>
-          </div>
-        <Footer />
+          <Footer />
+        </div>
       </div>
       )
   } else {

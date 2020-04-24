@@ -25,9 +25,9 @@ export default function Home() {
 
     return(
         <div className={classes.imge}>
-            <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+            <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center md:w-auto sm:w-auto break-normal">
                     <p class="text-white font-extrabold text-6xl md:text-5xl">
-                        AdvisorApp
+                        Advisor's App
                     </p>
                     <p class="text-xl md:text-2xl text-gray-500"> </p>
             </div>
