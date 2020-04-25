@@ -13,7 +13,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Paper from '@material-ui/core/Paper';
 import parse from 'html-react-parser';
 import img from '../images/bg-1.jpg'
-import blog from '../images/card-top.jpg'
 // import { Markup } from 'interweave';
 import Footer from '../components/footer'
 
@@ -87,7 +86,7 @@ export default function Home() {
         <Navbar />
         <div className="w-full  h-screen   font-sans leading-normal tracking-normal ">
           <Header />
-            <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 ">
+            <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 lg:mb-24 ">
               <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t   ">
                   <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-48  "></div>
                   {allPosts.posts.map((v,i) =>
@@ -114,6 +113,3 @@ export default function Home() {
   }
 
 }
-Paper.propTypes = {
-  width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired,
-};

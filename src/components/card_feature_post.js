@@ -12,7 +12,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Paper from '@material-ui/core/Paper';
 import parse from 'html-react-parser';
 import img from '../images/bg-1.jpg'
-import blog from '../images/card-top.jpg'
 // import { Markup } from 'interweave';
 import Footer from '../components/footer'
 
@@ -26,12 +25,13 @@ const useStyles = makeStyles(theme => ({
     // margin: '5em'
   },
   imge:{
-    height:'33em',
+    height:'20em',
     width: '100%',
-    background: '#0a5bff',
     zIndex: '100',
   },
-
+  bg:{
+    
+  },
 }));
 
 export default function CardFeaturePost(props) {
@@ -61,33 +61,31 @@ export default function CardFeaturePost(props) {
 
        </Helmet>
        <div className="container cursor-pointer px-4 md:px-0 max-w-6xl mx-auto p-10 -mt-12">
-         <div className="w-auto  rounded-lg  sm:flex">
-           <div className=" sm:h-auto sm:w-64 md:w-2/4 flex-none bg-cover  md:ml-4 rounded-t rounded-lg 
-                sm:rounded-l ">
-              <img src={props.v.feature_image} class="h-full w-full shadow rounded-lg " onClick={()=>handleExcerptClick(props.v)}  />
-            </div>
-            <div className="px-12 py-8 md:w-2/3" onClick={()=>handleExcerptClick(props.v)}>
-              <h2 className="mb-2 font-black">{props.v.title}</h2>
-                <p className="mb-4 text-grey-dark text-sm">
-                  {parse(props.v.excerpt)}
-                </p>
-                  <button class="bg-transparent hover:border-blue-700 text-gray-800 font-semibold rounded-full hover:text-blue-700 lg:mt-4 
-                  py-2 px-4 border border-gray-800 hover:border-transparent rounded" onClick={()=>handleExcerptClick(props.v)}>
-                    Read More...
-                  </button>
-                <div className="flex-none mt-auto  rounded-b lg:mt-12  p-6" >
-                  <div className="flex items-center justify-between">
-                    <img className="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author" />
-                      <p className="text-gray-600 text-xs md:text-sm">
-                      <TimeAgo date={parse (props.v.published_at )}  />
-                      </p>
-                  </div>
-                </div>
-            </div>          
-         </div>
+       <img className={classes.imge} src={img}  onClick={()=>handleExcerptClick(props.v)}/>
+       <div className="px-12 py-8 z-50 lg:-mt-64 md:-mt-64 -pt-64 lg:text-left" onClick={()=>handleExcerptClick(props.v)}>
+       <h2 className="mb-2 font-black lg:text-white md:text-white text-black md:text-black">{props.v.title}</h2>
+         <p className="mb-4 lg:text-white  md:text-white text-black text-sm">
+           {parse(props.v.excerpt)}
+         </p>
+           <button class="bg-transparent hover:border-white md:hover:border-white text-gray-800 font-semibold rounded-full hover:text-white lg:mt-4 
+           py-2 px-4 border border-gray-800 hover:border-transparent rounded" onClick={()=>handleExcerptClick(props.v)}>
+             Read More...
+           </button>
+        
+     </div>
       </div>
    </div>
  )
 
 }
 // <TimeAgo date={parse (props.v.published_at )}>{({ value }) => <h2>{value}</h2>}</TimeAgo>
+
+
+// <div className="flex-none mt-auto  rounded-b  p-6" >
+// <div className="flex items-center justify-between">
+//   <img className="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author" />
+//     <p className="text-gray-600 text-xs md:text-sm">
+//     <TimeAgo date={parse (props.v.published_at )}  />
+//     </p>
+// </div>
+// </div>

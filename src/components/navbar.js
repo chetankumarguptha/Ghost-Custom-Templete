@@ -17,10 +17,10 @@ function navbar() {
                 
                 </div>
                 <div>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-12">
+                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-12">
                     Home
                 </a>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-48">
+                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-48">
                     About
                 </a>
                 </div>

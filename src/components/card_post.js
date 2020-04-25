@@ -12,7 +12,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Paper from '@material-ui/core/Paper';
 import parse from 'html-react-parser';
 import img from '../images/bg-1.jpg'
-import blog from '../images/card-top.jpg'
 // import { Markup } from 'interweave';
 import Footer from '../components/footer'
 
