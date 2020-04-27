@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     // margin: '5em'
   },
   imge:{
-    height:'33em',
+    height:'38em',
     width: '100%',
     background: '#0a5bff',
     zIndex: '100',
@@ -25,9 +25,9 @@ export default function Home() {
 
     return(
         <div className={classes.imge}>
-            <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center md:w-auto sm:w-auto break-normal">
+            <div class="container max-w-4xl mx-auto pt-16 md:pt-32  text-center md:w-auto sm:w-auto break-normal">
                     <p class="text-white font-extrabold text-6xl md:text-5xl">
-                        Advisor's App
+                      
                     </p>
                     <p class="text-xl md:text-2xl text-gray-500"> </p>
             </div>
