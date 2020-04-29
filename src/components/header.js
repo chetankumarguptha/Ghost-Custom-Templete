@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     // margin: '5em'
   },
   imge:{
-    height:'38em',
+    height:'22em',
     width: '100%',
     background: '#0a5bff',
     zIndex: '100',

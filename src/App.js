@@ -14,7 +14,8 @@ import {blueGrey, green, blue, yellow} from '@material-ui/core/colors';
 
 import Home from './components/home'
 import Post from './components/post'
-import Footer from "./components/footer"
+import Navbar from "./components/navbar"
+import About from "./components/about.js"
 const theme = createMuiTheme({
   palette: {
      primary: {
@@ -31,6 +32,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+    <Navbar />
     <div className="w-full  h-screen ">
       <BrowserRouter>
         <Switch>
@@ -39,6 +41,9 @@ function App() {
           </Route>
           <Route exact path="/:slug">
               <Post />
+          </Route>
+          <Route exact path="/about">
+              <About />
           </Route>
 
         </Switch>

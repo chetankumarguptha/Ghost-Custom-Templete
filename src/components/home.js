@@ -83,7 +83,6 @@ export default function Home() {
   if(allPosts.posts){
     return(
       <div>
-        <Navbar />
         <div className="w-full  h-screen   font-sans leading-normal tracking-normal ">
           <Header />
             <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 lg:mb-24 ">
