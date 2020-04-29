@@ -38,16 +38,7 @@ export default function CardFeaturePost(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const history = useHistory();
-
-  
-
-  
-
-
-
-
-
- const handleExcerptClick = (v) => {
+  const handleExcerptClick = (v) => {
 
    history.push(`/${v.slug}`, {postData: v})
  }
@@ -78,14 +69,3 @@ export default function CardFeaturePost(props) {
  )
 
 }
-// <TimeAgo date={parse (props.v.published_at )}>{({ value }) => <h2>{value}</h2>}</TimeAgo>
-
-
-// <div className="flex-none mt-auto  rounded-b  p-6" >
-// <div className="flex items-center justify-between">
-//   <img className="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author" />
-//     <p className="text-gray-600 text-xs md:text-sm">
-//     <TimeAgo date={parse (props.v.published_at )}  />
-//     </p>
-// </div>
-// </div>

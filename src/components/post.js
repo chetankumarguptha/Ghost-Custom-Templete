@@ -61,7 +61,4 @@ export default function Post(props) {
       
       )
   }
-  // <Button color="primary" onClick={handleBack}> Back </Button>
-
-  // function createMarkup() { return {__html: 'First &middot; Second'}; };
-  // <div dangerouslySetInnerHTML={createMarkup()} />
+  
