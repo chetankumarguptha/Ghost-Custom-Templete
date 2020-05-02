@@ -4,9 +4,6 @@ import {
   BrowserRouter,
   Route,
   Switch,
-  withRouter,
-  Redirect,
-  Link,
 } from "react-router-dom";
 
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
@@ -14,7 +11,6 @@ import {blueGrey, green, blue, yellow} from '@material-ui/core/colors';
 
 import Home from './components/home'
 import Post from './components/post'
-import Navbar from "./components/navbar"
 import About from "./components/about.js"
 const theme = createMuiTheme({
   palette: {

@@ -34,7 +34,7 @@ export default function CardFeaturePost(props) {
 
  return(
    <div className="" >
-      <div className="container cursor-pointer px-4 md:px-0 max-w-6xl mx-auto p-10 md:p-4 lg:p-10 -mt-12">
+      <div className="container cursor-pointer px-4 md:px-0 max-w-6xl mx-auto p-10 md:p-4 lg:p-10  ">
         <img className={classes.imge} src={props.v.feature_image}  onClick={()=>handleExcerptClick(props.v)} />
         <div className="px-12 py-8 z-50 lg:-mt-64 md:-mt-64 -pt-64 lg:text-left" onClick={()=>handleExcerptClick(props.v)}>
             <h2 className="mb-2 font-black lg:text-white md:text-white text-black md:text-black">{props.v.title}</h2>
