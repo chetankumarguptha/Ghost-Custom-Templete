@@ -12,9 +12,9 @@ import {call, put} from "redux-saga/effects";
 
 import * as TYPES from "./types";
 
-const ROOT_URL = `https://blogserver.advisorsapp.com/ghost/api/v3/content/posts`;
+const ROOT_URL = `http://157.245.167.35/ghost/api/v3/content/posts`;
 
-const KEY = "?key=bab291ed673a926d34090f27f6"
+const KEY = "?key=522cc52114abbc051e24750061"
 
 
 const api = (url) =>

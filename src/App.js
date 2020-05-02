@@ -32,7 +32,6 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <Navbar />
     <div className="w-full  h-screen ">
       <BrowserRouter>
         <Switch>

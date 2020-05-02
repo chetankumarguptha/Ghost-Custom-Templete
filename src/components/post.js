@@ -2,26 +2,19 @@ import React, {useState, useEffect} from  'react';
 import {  makeStyles } from '@material-ui/core/styles';
 import { useHistory, useRouteMatch, useLocation } from 'react-router';
 
-// import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-// import CircularProgress from '@material-ui/core/CircularProgress';
-
-// import parse from 'html-react-parser';
-import bgimage from '../images/images.jpeg'
-// import { width } from '@material-ui/system';
 import Footer from "./footer"
 import Navbar from "./navpost"
+import "../components/styles/post.css"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // background: '#f9f9f9',
-    height: '50vh',
+    height: '60vh',
     margin: '3em',
     opacity:'0.9',
-    repeat: 'no-repeat',
-    // top:'2em',
     cursor: 'pointer',
     borderRadius: 20,
+    resizeMode: 'cover'
+
 
 
   },
@@ -40,22 +33,28 @@ export default function Post(props) {
   const handleBack = () => {
     history.goBack()
   }
+  
   let postInfo = location.state.postData
   console.log(postInfo);
 
-    return(  <div className="w-full  h-screen ">
-          <Navbar className="" />
-    
-      <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
+    return( 
+      <div>
+          <Navbar />
+            <div className="w-full  h-screen mt-40 lg:mt-32 ">
+          
+              <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
 
-      <div className="font-bold text-xl mb-2 text-center text-6xl	">{postInfo.title}</div>
+              <div className="font-bold text-xl mb-2 text-center text-6xl	 md:leading-9">{postInfo.title}</div>
+                <div className="container mx-auto bg-white rounded-lg lg:z-50 lg:mb-24 ">
+                  <div class="w-10/12 mx:auto p-10 leading-4 items-center " />
+                    <section
+                        className="content-body load-external-scripts"
+                        dangerouslySetInnerHTML={{ __html: postInfo.html }}
+                    />
+                </div>
+              <Footer />
+            </div>    
 
-
-      <div class="text-gray-900 leading-none lg:m-24 text-center object-none object-center lg:items-center lg:p-24 lg:px-64 lg:ml-48 md:mb-32 ld:justify-center leading-snug"
-      dangerouslySetInnerHTML={{ __html: postInfo.html }} />
-
-     
-      <Footer />
       </div>
       
       

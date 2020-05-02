@@ -1,26 +1,10 @@
 import React, {useState, useEffect} from  'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {  makeStyles } from '@material-ui/core/styles';
-import {Helmet} from "react-helmet";
-
 import { useHistory } from 'react-router';
-import TimeAgo from 'react-timeago';
-
-import PropTypes from 'prop-types';
-
-// import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Paper from '@material-ui/core/Paper';
-import parse from 'html-react-parser';
-import img from '../images/bg-1.jpg'
-// import { Markup } from 'interweave';
 import Footer from '../components/footer'
-
 import {fetchAllPostsFromGhostAPIRequest} from '../actions/all_posts';
-import { width } from '@material-ui/system';
-import Hidden from '@material-ui/core/Hidden';
-
-
 import CardPost from './card_post';
 import CardFeaturePost from './card_feature_post';
 import Subscribe from './subscribe'
@@ -34,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     width:'auto'
   },
   imge:{
-    height:'33em',
+    height:'30em',
     width: '100%',
     background: '#0a5bff',
     zIndex: '100',
@@ -61,11 +45,6 @@ export default function Home() {
     dispatch(fetchAllPostsFromGhostAPIRequest())
   }
 
- const handleExcerptClick = (v) => {
-
-   history.push(`/${v.slug}`, {postData: v})
- }
-
 
  const handlePostTypeFeature = (post) => {
   if(post.featured === true){
@@ -83,9 +62,10 @@ export default function Home() {
   if(allPosts.posts){
     return(
       <div>
-        <div className="w-full  h-screen   font-sans leading-normal tracking-normal ">
+      <Navbar />
+        <div className="w-full  h-screen  leading-normal tracking-normal ">
           <Header />
-            <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 lg:mb-24 ">
+            <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 lg:mb-24 lg:shadow-lg  ">
               <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t   ">
                   <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-48  "></div>
                   {allPosts.posts.map((v,i) =>

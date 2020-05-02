@@ -5,18 +5,7 @@ import {Helmet} from "react-helmet";
 
 import { useHistory } from 'react-router';
 import TimeAgo from 'react-timeago';
-
-
-// import Paper from '@material-ui/core/Paper';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Paper from '@material-ui/core/Paper';
 import parse from 'html-react-parser';
-import img from '../images/bg-1.jpg'
-// import { Markup } from 'interweave';
-import Footer from '../components/footer'
-
-import {fetchAllPostsFromGhostAPIRequest} from '../actions/all_posts';
-import { width } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -79,12 +68,3 @@ export default function CardPost(props) {
 }
 
 
-// if(allPosts.posts){
-//   return(
-    
-//     )
-// } else {
-//   return (
-//   );
-// }
-// <button class="transition duration-500 ease-in-out bg-blue-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 ...">
