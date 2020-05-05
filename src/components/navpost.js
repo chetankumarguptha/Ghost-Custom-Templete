@@ -18,9 +18,9 @@ export default function navbar(props) {
 
     return (
         <div>
-            <div className="  top-0 bg-gray-100 fixed w-screen z-50">
+            <div className="  top-0 fixed w-screen z-50">
                 
-                    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-8 px-8">
+                    <div className="container flex flex-row sm:flex-row justify-between items-center mx-auto py-8 px-8">
                     <div className="flex  cursor-pointer">   
                         <span className="w-48 md:56 lg:ml-8" >
                             <img src={Logo} />

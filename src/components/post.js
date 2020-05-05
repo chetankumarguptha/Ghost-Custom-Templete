@@ -8,14 +8,21 @@ import "../components/styles/post.css"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '60vh',
-    margin: '3em',
+    height: '800px',
+    margin: '1em',
     opacity:'0.9',
     cursor: 'pointer',
     borderRadius: 20,
-    resizeMode: 'cover'
+    backgroundSize: 'cover',
+    [theme.breakpoints.down('sm')]: {
+      height: '400px',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '600px',    },
 
-
+    [theme.breakpoints.up('lg')]: {
+      height: '800px',
+    },
 
   },
 

@@ -13,11 +13,22 @@ const useStyles = makeStyles(theme => ({
     // margin: '5em'
   },
   imge:{
-    height:'20em',
+    height:'500px',
     width: '100%',
     zIndex: '100',
     padding:"10px",
-    borderRadius:"25px"
+    borderRadius:"25px",
+
+    [theme.breakpoints.down('sm')]: {
+      height: '250px',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '500px',    },
+
+    [theme.breakpoints.up('lg')]: {
+      height:'500px',
+    },  
+
   },
   bg:{
     
