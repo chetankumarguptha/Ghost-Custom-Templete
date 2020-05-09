@@ -51,7 +51,7 @@ export default function Post(props) {
           
               <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
 
-              <div className="font-bold text-xl mb-2 text-center text-6xl	 md:leading-9">{postInfo.title}</div>
+              <div className="font-bold text-xl mb-2 text-center text-6xl	lg:mt-4 md:mt-4 md:leading-9">{postInfo.title}</div>
                 <div className="container mx-auto bg-white rounded-lg lg:z-50 lg:mb-24 ">
                   <div class="w-10/12 mx:auto p-10 leading-4 items-center " />
                     <section
