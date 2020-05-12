@@ -78,9 +78,10 @@ export default function Home() {
                       {handlePostType(v)}
                     </div>
                   )}
-                <Subscribe />
+                
               </div>
             </div>
+            <Subscribe />
           <Footer />
         </div>
       </div>

@@ -3,7 +3,7 @@ import React from 'react'
 function subscribe() {
     return (
         <div>
-        <div className="container font-sans bg-teal-100 rounded mt-8 p-4 md:p-24 text-center shadow-2xl px-4 md:px-0 max-w-6xl mx-auto mt-36"  >
+        <div className="container font-sans bg-teal-100 rounded mt-8 p-4 md:p-24 z-30 lg:-mt-32 lg:mb-24 md:-mt-12 md:mb-24 mb-12 text-center shadow-2xl px-4 md:px-0 max-w-6xl mx-auto mt-36"  >
         <h2 className="font-bold break-normal text-2xl md:text-4xl">Subscribe</h2>
         <h3 className="font-bold break-normal font-normal text-gray-600 text-base md:text-xl">Get the latest posts delivered right to your inbox</h3>
         <div className="w-full text-center pt-4">

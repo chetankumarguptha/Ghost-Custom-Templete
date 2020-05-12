@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { useHistory, useRouteMatch, useLocation } from 'react-router';
 import { Link } from "react-router-dom";
