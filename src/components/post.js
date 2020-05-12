@@ -49,11 +49,11 @@ export default function Post(props) {
           <Navbar />
             <div className="w-full  h-screen mt-40 lg:mt-32 ">
           
-              <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} onClick={handleBack}></div>
+              <div className={classes.root} style={{backgroundImage: `url(${postInfo.feature_image})` }} ></div>
 
               <div className="font-bold text-xl mb-2 text-center text-6xl	lg:mt-4 md:mt-4 md:leading-9">{postInfo.title}</div>
                 <div className="container mx-auto bg-white rounded-lg lg:z-50 lg:mb-24 ">
-                  <div class="w-10/12 mx:auto p-10 leading-4 items-center " />
+                  <div class="w-10/12 mx:auto p-10 leading-4  items-center " />
                     <section
                         className="content-body load-external-scripts"
                         dangerouslySetInnerHTML={{ __html: postInfo.html }}
@@ -67,4 +67,6 @@ export default function Post(props) {
       
       )
   }
+
+  // onClick={handleBack}
   
