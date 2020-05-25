@@ -66,8 +66,7 @@ export default function Home() {
         <div className="w-full  h-screen  leading-normal tracking-normal ">
           <Header />
             <div className="container mx-auto bg-gray-100 rounded-lg lg:z-50 lg:mb-24 lg:shadow-lg  ">
-              <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t   ">
-                  <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-48  "></div>
+              <div  className="  w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t container px-4 md:px-0 max-w-6xl mx-auto -mt-48">
                   {allPosts.posts.map((v,i) =>
                     <div key={i} >
                       {handlePostTypeFeature(v)}

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from  'react';
 import {  makeStyles } from '@material-ui/core/styles';
 import { useHistory, useRouteMatch, useLocation } from 'react-router';
-
+import {Helmet} from "react-helmet";
 import Footer from "./footer"
 import Navbar from "./navpost"
 import "../components/styles/post.css"
@@ -46,6 +46,16 @@ export default function Post(props) {
 
     return( 
       <div>
+          <Helmet>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="title" content={postInfo.title} />
+            <meta property="og:title" content="title" />
+            <meta name="theme-color" content="#000000" />
+            <meta name="description" content={postInfo.excerpt}   />   
+            <meta property="og:type" content="article" />
+          
+          </Helmet>
           <Navbar />
             <div className="w-full  h-screen mt-40 lg:mt-32 ">
           
