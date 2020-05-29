@@ -54,14 +54,14 @@ export default function CardPost(props) {
       </Helmet>      
       <div className="container  cursor-pointer px-4 md:px-0 max-w-6xl mx-auto p-10  ">
         <div className="w-auto  rounded  sm:flex" onClick={()=>handleExcerptClick(props.v)}>
-          <div className="px-6 py-4 md:w-2/3">
+          <div className="px-6 py-4 md:w-2/3 border-b-8 border-red-800">
             <h2 className="mb-2 font-black">{props.v.title}</h2>
             <p className="mb-4 text-grey-dark text-sm">
             {parse(props.v.excerpt)}
             </p>
             <div className="flex-none mt-auto  lg:mt-12  p-6">
               <div className="flex items-center justify-between">
-                <Avatar alt="Travis Howard" src={one} className={classes.root} />
+                <Avatar alt="Travis Howard" src="" className={classes.root} />
 
                 <div class="flex items-center text-sm justify-between leading-tight lg:-ml-40 md:-ml-4 md:p-4">
                   <h1 class="text-lg">
